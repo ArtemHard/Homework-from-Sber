@@ -1,0 +1,21 @@
+{{!--
+<hr /> --}}
+
+<section class="d-flex flex-column align-items-center">
+
+    {{#each listOfPosts}}
+    <div class="card my-2" style="width: 18rem;">
+        <img src={{this.photo}} class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{this.nickname}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{this.header}}</h6>
+            <p class="card-text">{{this.text}}</p>
+            <div class="btn-group d-flex flex-column align-items-center" role="group"
+                aria-label="Basic mixed styles example">
+                <button data-fetch type="button" class="btn btn-outline-primary">Delete</button>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+</section>

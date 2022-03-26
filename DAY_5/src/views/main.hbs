@@ -1,0 +1,44 @@
+
+<div class="d-flex justify-content-center">
+    <form class="" action="/addressbook" method="POST">
+        <div class="mb-3">  
+            <input name ='header' type="name" class="form-control" id="exampleFormControlTextarea1"  placeholder="введите заголовок">
+        </div>
+
+        <div class="mb-3">
+            <textarea name ='text' class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="текст"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <input name ='nickname' type="name" class="form-control" id="exampleFormControlTextarea1"  placeholder="никнейм">
+        </div>
+
+        <div class="mb-3">
+            <input name ='photo' type="name" class="form-control" id="exampleFormControlTextarea1"  placeholder="ссылка на фото">
+        </div>
+        {{!-- <div class="mb-3">
+            <input class="form-control" type="file" id="formFile">
+        </div> --}}
+            <div class="d-flex flex-column align-items-center">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </div>
+    </form>
+</div>
+
+<hr />
+
+<section class="d-flex flex-column align-items-center">
+ 
+   {{#each listOfPosts}}
+    <div class="card my-2" style="width: 18rem;">
+        <img src={{this.photo}} class="card-img-top" alt="...">
+            <div class="card-body">
+             <h5 class="card-title">{{this.nickname}}</h5>
+             <h6 class="card-subtitle mb-2 text-muted">{{this.header}}</h6>
+             <p class="card-text">{{this.text}}</p>
+        </div>
+    </div>
+    {{/each}}
+    
+</section>
+

@@ -1,0 +1,25 @@
+<div class="header">
+    <nav class="navigation">
+
+        <div class="navigation__link">
+            <a href="/">Main</a>
+        </div>
+
+        {{#if nickname}} {{!если if есть name // в res.locals.name задали // если оно есть то отрендерить }}
+        <div class="navigation__link">
+            <a href="/secret">Add new Post</a>
+        </div>
+        <div class="navigation__link">
+            <a href="/auth/signout">Sign Out</a>
+        </div>
+        {{else}}
+        <div class="navigation__link">
+            <a href="/auth/signup">Sign Up</a>
+        </div>
+        <div class="navigation__link">
+            <a href="/auth/signin">Sign In</a>
+        </div>
+        {{/if}}
+
+    </nav>
+</div>

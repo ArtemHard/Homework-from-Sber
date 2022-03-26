@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-center">
+    <form name="newpostform" class="" action="/addressbook" method="POST">
+        <div class="mb-3">
+            <input data-header name='header' type="name" class="form-control" id="exampleFormControlTextarea1"
+                placeholder="введите заголовок">
+        </div>
+
+        <div class="mb-3">
+            <textarea data-postText name='text' class="form-control" id="exampleFormControlTextarea1" rows="3"
+                placeholder="текст"></textarea>
+        </div>
+
+        {{!-- <div class="mb-3">
+            <input name='nickname' type="name" class="form-control" id="exampleFormControlTextarea1"
+                placeholder="никнейм">
+        </div> --}}
+
+        <div class="mb-3">
+            <input data-linkPhoto name='photo' type="name" class="form-control" id="exampleFormControlTextarea1"
+                placeholder="ссылка на фото">
+        </div>
+        {{!-- <div class="mb-3">
+            <input class="form-control" type="file" id="formFile">
+        </div> --}}
+        <div class="d-flex flex-column align-items-center">
+            <button data-fetch type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+    </form>
+</div>
